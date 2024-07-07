@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 441
-  Top = 419
+  Left = 386
+  Top = 213
   Width = 922
-  Height = 458
+  Height = 462
   Caption = 'Kategori'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -45,6 +45,7 @@ object Form3: TForm3
     Width = 329
     Height = 21
     TabOrder = 0
+    OnChange = Edit1Change
   end
   object Button1: TButton
     Left = 136
@@ -75,19 +76,21 @@ object Form3: TForm3
   end
   object el: TEdit
     Left = 168
-    Top = 368
+    Top = 376
     Width = 321
     Height = 21
     TabOrder = 4
     Text = 'el'
+    OnChange = elChange
   end
   object Button4: TButton
     Left = 520
-    Top = 360
+    Top = 344
     Width = 89
     Height = 41
     Caption = 'CARI'
     TabOrder = 5
+    OnClick = Button4Click
   end
   object tablename: TDBGrid
     Left = 136
@@ -102,5 +105,21 @@ object Form3: TForm3
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = tablenameCellClick
+  end
+  object Button5: TButton
+    Left = 480
+    Top = 112
+    Width = 105
+    Height = 49
+    Caption = 'Batal'
+    TabOrder = 7
+  end
+  object Button6: TButton
+    Left = 32
+    Top = 112
+    Width = 97
+    Height = 49
+    Caption = 'Save'
+    TabOrder = 8
   end
 end

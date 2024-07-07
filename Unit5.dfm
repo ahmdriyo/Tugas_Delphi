@@ -94,8 +94,8 @@ object Form5: TForm5
     TabOrder = 4
   end
   object Button4: TButton
-    Left = 528
-    Top = 384
+    Left = 488
+    Top = 48
     Width = 89
     Height = 41
     Caption = 'CARI'

@@ -17,10 +17,15 @@ type
     Button4: TButton;
     Label2: TLabel;
     tablename: TDBGrid;
+    Button5: TButton;
+    Button6: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure tablenameCellClick(Column: TColumn);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure elChange(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,6 +89,37 @@ begin
         Open;
      end;
      ShowMessage('Data berhasil di hapus');
+end;
+
+procedure TForm3.Button4Click(Sender: TObject);
+begin
+  with DataModule4.Zkategori do
+begin
+SQL.Clear;
+SQL.Add('select * from kategori where name = "'+e1.Text+'"');
+Open;
+end;
+end;
+
+procedure TForm3.elChange(Sender: TObject);
+begin
+  with DataModule4.Zkategori do
+begin
+SQL.Clear;
+SQL.Add('select * from kategori where name like "%'+e2.Text+'%"');
+Open;
+end;
+end;
+
+procedure TForm3.Edit1Change(Sender: TObject);
+begin
+      btn6.Enabled:= True;
+btn1.Enabled:= false;
+btn2.Enabled:= false;
+btn5.Enabled:= false;
+btn3.Enabled:= false;
+e1.clear;
+e1.Enabled:= False;
 end;
 
 end.

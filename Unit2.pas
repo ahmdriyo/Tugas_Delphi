@@ -29,6 +29,7 @@ uses
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
+
   if el.Text = 'admin' then
   begin
     Form1.mm1.Items[1].Visible := True;
@@ -44,10 +45,9 @@ begin
     Form1.mm1.Items[1].Visible := False;
     Form1.mm1.Items[2].Visible := False;
     Form1.mm1.Items[3].Visible := True;
-  end else
-  begin
-    Form2.Close;
   end;
+  Form1.mm1.Items[3].Visible:= True;
+  Form2.Close;
 end;
 
 end.
